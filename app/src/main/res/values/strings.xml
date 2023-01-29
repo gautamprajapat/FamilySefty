@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application Family Sefty</string>
+    <string name="security">Security</string>
+    <string name="sos">SOS</string>
+    <string name="in_case_of_emergency_keep_telling_family_members_to_connect_me">In case of emergency keep telling family members to connect me</string>
+    <string name="gaurd">GAURD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
