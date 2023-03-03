@@ -1,11 +1,13 @@
 package com.example.myapplicationfamilysefty
 
+import android.content.pm.PackageManager
 import androidx.fragment.app.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -26,9 +28,16 @@ class MapsFragment : Fragment() {
          * install it inside the SupportMapFragment. This method will only be triggered once the
          * user has installed Google Play services and returned to the app.
          */
-        val sydney = LatLng(-34.0, 151.0)
-        googleMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
+        val sydney = LatLng(28.6302, 77.2853)
+        googleMap.addMarker(MarkerOptions().position(sydney).title("BPIBS(DSEU)"))
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        if(ContextCompat.checkSelfPermission(
+                requireContext(),android.Manifest.permission.ACCESS_FINE_LOCATION)==PackageManager.PERMISSION_GRANTED)
+        {
+            googleMap.isMyLocationEnabled=true
+        }
+
+
     }
 
     override fun onCreateView(
